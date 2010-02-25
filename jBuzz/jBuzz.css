@@ -1,0 +1,125 @@
+#jBuzz-wrapper
+{
+	width: 100%;
+	height: 100%;
+	background-color: #e9e9e9;
+	border: 1px solid #d9d9d9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font: 11px Helvetica, sans-serif;
+	color: #858585;
+	padding: 5px;
+}
+#jBuzz-wrapper-inner
+{
+	border: 1px solid #d9d9d9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#jBuzz-wrapper-outter
+{
+	border: 1px solid #f2f2f2;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#jBuzz-header
+{
+	margin: 5px;
+	margin-bottom: 0px;
+	width: 100%px;
+	height: 60px;
+	border-bottom: 1px solid #d9d9d9;
+}
+#jBuzz-avatar-outter
+{
+	width: 52px;
+	height: 52px;
+	border: 1px solid #f2f2f2;
+}
+#jBuzz-avatar-inner
+{
+	border: 1px solid #d9d9d9;
+	background-color: #e4e4e4;
+	width: 50px;
+	height: 50px;
+}
+#jBuzz-avatar
+{
+	float: left;
+	margin-right: 5px;
+}
+#jBuzz-user-name .jBuzz-name
+{
+	font-size: 14px;
+}
+#jBuzz-user-name .jBuzz-nick
+{
+	font-size: 12px;
+}
+#jBuzz-posts
+{
+	margin: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#jBuzz-credits
+{
+	border-top: 1px solid #f2f2f2;
+	margin: 5px;
+	margin-top: 0px;
+	font-size: 10px;
+}
+#jBuzz-credits-content
+{
+	margin: 5px 0 5px 0;
+}
+.jBuzz-btn 
+{
+	font-size: 10px;
+	text-align: center;
+	display: inline-block;
+	background: url(btn-bg.png) repeat-x 0px 0px;
+	margin-top: 3px;
+	padding:1px 3px 1px 3px;
+	border:1px solid rgba(0,0,0,0.4);
+	-moz-border-radius: 3px;
+	-moz-box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+	background-color: #CCCCCC; color: #141414;
+}
+.jBuzz-btn:hover 
+{
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	cursor:pointer;
+	background-color: #00c0ff; color: #ffffff;
+}
+.jBuzz-post-content
+{
+	border-top: 1px solid #f2f2f2;
+	border-bottom: 1px solid #d9d9d9;
+	padding-bottom: 5px;
+}
+.jBuzz-date, .jBuzz-by
+{
+	font-size: 10px;
+	float: left;
+}
+.jBuzz-comments, .jBuzz-google
+{
+	font-size: 10px;
+	float: right;
+}
+a:link, a:visited
+{
+	color:#666666;
+	text-decoration: none;
+}
+ a:hover
+{
+	color:#333333;
+}
+.jBuzz-clear
+{
+	clear: both;
+}
