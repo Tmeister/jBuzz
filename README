@@ -5,5 +5,9 @@ Email: noone@tmeister.net
 URL: http://klr20mg.com/2010/02/18/jbuzz-a-google-buzz-widget-jquery-plugin/
 License: http://creativecommons.org/licenses/by-sa/3.0/
 
+jBuzz Google Buzz Widget is a jQuery plugin that allows you to add your Google stream Buzz on your website, is "cross browser" runs on all major browsers and is very easy to implement in your website. You can change its appearance using CSS and customize as many buzz display using the configuration options.
+
+Use the API released by Google, getting the buzz through ATOM and displays them in the container of your website, to avoid problems with permissions of "cross-domain" jBuzz uses a proxy set up php to avoid this problem.
+
 jBuzz by Enrique Chavez is licensed under a Creative Commons Attribution-Share Alike 3.0 Unported License.
 Based on a work at klr20mg.com.
