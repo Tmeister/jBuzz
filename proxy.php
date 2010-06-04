@@ -1,5 +1,5 @@
 <?php
-if( $_REQUEST['type'] == 'xml' )
+if( isset($_REQUEST['type']) && $_REQUEST['type'] == 'xml' )
 {
 	header('Content-type: application/xml');
 }

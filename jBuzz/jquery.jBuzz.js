@@ -189,80 +189,41 @@
 		        });
 		    }
 		};
-		function cuteDate(date)
-		{
+		
+		
+		function cuteDate(time){
+	    var date = new Date((time.replace(/.000Z/g,'Z') || "").replace(/-/g,"/").replace(/[TZ]/g," ")),
+		    diff = (((new Date()).getTime() - date.getTime()) / 1000),
+		    day_diff = Math.floor(diff / 86400), month_diff = Math.floor( day_diff / 30 );
 			
-			if( date.length == 0)
-			{
-				return "";
-			}
+	    if ( isNaN(day_diff) || day_diff < 0 )
+		    return ;
 			
-			var regexp = 	"([0-9]{4})(-([0-9]{2})(-([0-9]{2})" +
-    								"(T([0-9]{2}):([0-9]{2})(:([0-9]{2})(\.([0-9]+))?)?" +
-    								"(Z|(([-+])([0-9]{2}):([0-9]{2})))?)?)?)?";
-    		
-			var d = date.match(new RegExp(regexp));
-		    
-			var offset = 0;
-		    var date = new Date(d[1], 0, 1);
-		    if (d[3]) { date.setMonth(d[3] - 1); }
-		    if (d[5]) { date.setDate(d[5]); }
-		    if (d[7]) { date.setHours(d[7]); }
-		    if (d[8]) { date.setMinutes(d[8]); }
-		    if (d[10]) { date.setSeconds(d[10]); }
-		    if (d[12]) { date.setMilliseconds(Number("0." + d[12]) * 1000); }
-		    if (d[14]) {
-		        offset = (Number(d[16]) * 60) + Number(d[17]);
-		        offset *= ((d[15] == '-') ? 1 : -1);
-		    }
-		    offset -= date.getTimezoneOffset();
-		    d = (Number(date) + (offset * 60 * 1000));
-		    dateFunc = new Date();
-			timeSince = dateFunc.getTime() - d;
-			inSeconds = timeSince / 1000;
-			inMinutes = timeSince / 1000 / 60;
-			inHours = timeSince / 1000 / 60 / 60;
-			inDays = timeSince / 1000 / 60 / 60 / 24;
-			inYears = timeSince / 1000 / 60 / 60 / 24 / 365;
-			
-			if(Math.round(inSeconds) == 1)
-			{
-				return "1 second ago";
-			}
-			else if(inMinutes < 1.01)
-			{
-				return (Math.round(inSeconds) + " seconds ago");
-			}
-			else if(Math.round(inMinutes) == 1){
-				return "1 minute ago";
-			}
-			else if(inHours < 1.01)
-			{
-				return (Math.round(inMinutes) + " minutes ago");
-			}
-			else if(Math.round(inHours) == 1)
-			{
-				return "1 hour ago";
-			}
-			else if(inDays < 1.01)
-			{
-				return (Math.round(inHours) + " hours ago");
-			}
-			else if(Math.round(inDays) == 1)
-			{
-				return "1 day ago";
-			}
-			else if(inYears < 1.01)
-			{
-				return (Math.round(inDays) + " days ago");
-			}
-			else if(Math.round(inYears) == 1)
-			{
-				return ("1 year ago");
-			}
-			else
-			{
-				return (Math.round(inYears) + " years ago");
-			}
-		}
+	    return day_diff == 0 && (
+			    diff < 60 && "just now" ||
+			    diff < 120 && "1 minute ago" ||
+			    diff < 3600 && Math.floor( diff / 60 ) + " minutes ago" ||
+			    diff < 7200 && "1 hour ago" ||
+			    diff < 86400 && Math.floor( diff / 3600 ) + " hours ago") ||
+		    day_diff == 1 && "Yesterday" ||
+		    day_diff < 7 && day_diff + " days ago" ||
+		    day_diff < 31 && Math.ceil( day_diff / 7 ) + " weeks ago" || 
+		    month_diff == 1 && "This Month" ||
+		    month_diff < 12 && month_diff + " months ago" ||
+		    month_diff >= 12 && Math.ceil( day_diff / 12 ) + " years ago" ;
+    }
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

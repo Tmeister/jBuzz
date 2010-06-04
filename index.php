@@ -12,7 +12,7 @@
 			}
 		</style>
 		<script type="text/javascript" charset="utf-8" src="jquery-1.4.1.min.js" ></script>
-		<script type="text/javascript" charset="utf-8" src="jBuzz/jquery.jBuzz.min.js" ></script>
+		<script type="text/javascript" charset="utf-8" src="jBuzz/jquery.jBuzz.js" ></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() 
 			{
